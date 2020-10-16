@@ -1,0 +1,138 @@
+.list
+    height: 664px
+    width: 1104px
+    border: 1px solid #E9E9E9
+    background-color: #FFFFFF
+    box-shadow: 0 0 16px 0 rgba(0,0,0,0.04)
+
+    margin-bottom: 50px
+
+    &-header
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+        padding: 24px 37px
+        height: 96px
+
+    &-mode 
+        display: flex
+
+        &-list
+            margin-right: 8px
+
+    &-search
+        height: 48px
+        width: 387px
+
+        padding-left: 50px
+
+        border: 1px solid #E9E9E9
+        border-radius: 2px
+        background-color: #F9F9F9
+        box-shadow: 0 0 8px 0 rgba(0,0,0,0.04)
+
+        outline: none
+
+        &, ::placeholder
+            color: #5F5F5F
+            font-size: 14px
+            font-weight: 300
+            letter-spacing: 0
+            line-height: 18px
+
+    &-head
+        color: #494949
+        font-size: 14px
+        font-weight: 500
+        letter-spacing: 0 
+        line-height: 64px
+
+    &-title
+        height: 64px
+        border-top: 1px solid #E9E9E9
+
+    &-row
+        height: 64px
+        border-top: 1px solid #E9E9E9
+        background-color: #FFFFFF
+
+        list-style-type: none
+
+        display: flex
+
+    &-cell
+        flex: 1
+        width: 250px
+        max-width: 250px
+
+    &-image
+        height: 40px
+        width: 40px
+        object-fit: cover
+        border-radius: 50%
+        margin: 12px 0
+
+    &-content
+        color: #5F5F5F
+        font-size: 14px
+        font-weight: 300
+        letter-spacing: 0
+        line-height: 64px 
+    
+
+    &-move-indicator-title
+        width: 24px
+        max-width: 24px
+        margin: 0 29px 0 17px
+
+    &-move-indicator 
+        width: 24px
+        max-width: 24px
+
+        margin: 8px 29px 0 17px
+
+.pagination
+    display: flex
+    align-items: center
+    justify-content: center
+    
+    &-button
+        height: 40px
+        width: 82px
+
+        cursor: pointer
+
+        border: none
+        background-color: transparent
+
+        color: #FA6A00
+        font-size: 14px
+        font-weight: 300
+        letter-spacing: 0
+        line-height: 18px
+        text-align: center
+
+        outline: none
+
+    &-page
+        outline: none
+
+        cursor: pointer
+
+        height: 19px
+        width: 19px
+
+        border: none
+        background-color: transparent
+
+        color: #969696
+        font-size: 14px
+        font-weight: 300
+        letter-spacing: 0
+        line-height: 18px
+
+        &.active
+            color: white
+            border-radius: 50%
+            background-color: #677FAC

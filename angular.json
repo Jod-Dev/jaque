@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "jaque"
+    }
+  },
+  "defaultProject": "jaque",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }

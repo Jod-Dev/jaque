@@ -1,0 +1,31 @@
+<ng-container [ngSwitch]="icon">
+    <ng-container *ngSwitchCase="'dots'">
+        <svg xmlns="http://www.w3.org/2000/svg" id="dots" width="24" height="24" viewBox="0 0 24 24">
+            <path fill="none" d="M0 0h24v24H0V0z" />
+            <path
+                d="M11 18c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2zm-2-8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm6 4c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+        </svg>
+    </ng-container>
+    <ng-container *ngSwitchCase="'list'">
+        <svg xmlns="http://www.w3.org/2000/svg" id="list" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z" />
+            <path d="M0 0h24v24H0z" fill="none" /></svg>
+    </ng-container>
+    <ng-container *ngSwitchCase="'cards'">
+        <svg xmlns="http://www.w3.org/2000/svg" id="cards" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M3 3v18h18V3H3zm8 16H5v-6h6v6zm0-8H5V5h6v6zm8 8h-6v-6h6v6zm0-8h-6V5h6v6z" />
+            <path d="M0 0h24v24H0z" fill="none" /></svg>
+    </ng-container>
+    <ng-container *ngSwitchCase="'off'">
+        <svg xmlns="http://www.w3.org/2000/svg" id="off" width="24" height="24" viewBox="0 0 24 24">
+            <path
+                d="M17 7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h10c2.76 0 5-2.24 5-5s-2.24-5-5-5zM7 15c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z" />
+            <path fill="none" d="M0 0h24v24H0z" /></svg>
+    </ng-container>
+    <ng-container *ngSwitchCase="'on'">
+        <svg xmlns="http://www.w3.org/2000/svg" id="on" width="24" height="24" viewBox="0 0 24 24">
+            <path
+                d="M17 7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h10c2.76 0 5-2.24 5-5s-2.24-5-5-5zm0 8c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z" />
+            <path fill="none" d="M0 0h24v24H0z" /></svg>
+    </ng-container>
+</ng-container>

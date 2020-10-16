@@ -1,0 +1,54 @@
+<div class="list">
+
+    <div class="list-header">
+        <input class="list-search" type="text" placeholder="Búsqueda" #search>
+        <div class="list-mode">
+            <app-user-icon [class]="mode === 'LIST' ? 'list-mode-list active' : 'list-mode-list'" [icon]="'list'"></app-user-icon>
+            <app-user-icon [class]="mode === 'CARDS' ? 'list-mode-cards active' : 'list-mode-cards'" [icon]="'cards'"></app-user-icon>
+        </div>
+    </div>
+
+    <ul class="list-title">
+        <li class="list-row">
+            <span class="list-cell list-head list-move-indicator-title"></span>
+            <span class="list-cell list-head" *ngFor="let header of headers" [title]="header.text">
+                {{ header.text }}
+            </span>
+        </li>
+    </ul>
+
+    <ng-template ngIf="mode === 'LIST'; else cards">
+        <ul class="list-body">
+            <li class="list-row" *ngFor="let user of (users | async | pagination: page : pagination | search: keyword)">
+                <span class="list-cell list-content list-move-indicator">
+                    <app-user-icon [icon]="'dots'"></app-user-icon>
+                </span>
+                <span class="list-cell list-content" *ngFor="let header of headers" [title]="user[header.value]">
+                    <ng-container [ngSwitch]="header.type">
+                        <ng-container *ngSwitchCase="'IMAGE'">
+                            <img class="list-image"  [src]="user[header.value]" />
+                        </ng-container>
+                        <ng-container *ngSwitchCase="'BOOLEAN'">
+                            <app-user-icon class="list-boolean"  [icon]="user[header.value] ? 'on' : 'off'"></app-user-icon>
+                        </ng-container>
+                        <ng-container *ngSwitchDefault>
+                            {{ user[header.value] | ellipsis: 10 }}
+                        </ng-container>
+                    </ng-container>
+                </span>
+            </li>
+        </ul>
+    </ng-template>
+    <ng-template #cards>
+        cards
+    </ng-template>
+</div>
+<div class="pagination">
+    <button class="pagination-button" (click)="back()"> Anterior </button>
+    <div class="pagination-pages">
+        <button [class]="index=== page ? 'pagination-page active' : 'pagination-page'" *ngFor="let index of users | async | range: pagination" (click)="page = index">
+            {{ index }}
+        </button>
+    </div>
+    <button class="pagination-button" (click)="next()"> Siguiente </button> 
+</div>
